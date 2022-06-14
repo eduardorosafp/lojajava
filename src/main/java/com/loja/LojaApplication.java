@@ -13,6 +13,7 @@ import com.loja.domain.Cidade;
 import com.loja.domain.Cliente;
 import com.loja.domain.Endereco;
 import com.loja.domain.Estado;
+import com.loja.domain.ItemPedido;
 import com.loja.domain.Pagamento;
 import com.loja.domain.PagamentoComBoleto;
 import com.loja.domain.PagamentoComCartao;
@@ -25,6 +26,7 @@ import com.loja.repositories.CidadeRepository;
 import com.loja.repositories.ClienteRepository;
 import com.loja.repositories.EnderecoRepository;
 import com.loja.repositories.EstadoRepository;
+import com.loja.repositories.ItemPedidoRepository;
 import com.loja.repositories.PagamentoRepository;
 import com.loja.repositories.PedidoRepository;
 import com.loja.repositories.ProdutoRepository;
@@ -49,6 +51,8 @@ public class LojaApplication implements CommandLineRunner {
 	private PedidoRepository pedidoRepository;
 	@Autowired
 	private PagamentoRepository pagamentoRepository;
+	@Autowired 
+	private ItemPedidoRepository itemPedidoRepository;
 	
 
 	public static void main(String[] args) {
@@ -121,7 +125,21 @@ public class LojaApplication implements CommandLineRunner {
 		
 		pedidoRepository.saveAll(Arrays.asList(ped1, ped2));
 		pagamentoRepository.saveAll(Arrays.asList(pagt1, pagt2));
-
+		
+		ItemPedido ip1 = new ItemPedido(ped1, p1, 00.0, 1, 2000.00, "Bom");
+		ItemPedido ip2 = new ItemPedido(ped1, p3, 00.0, 2, 80.0, "otimo mouse");
+		ItemPedido ip3 = new ItemPedido(ped2, p2, 10.0, 1, 100.00, null); 
+		
+		ped1.getItens().addAll(Arrays.asList(ip1, ip2));
+		ped2.getItens().addAll(Arrays.asList(ip3));
+		
+		p1.getItens().addAll(Arrays.asList(ip1));
+		p2.getItens().addAll(Arrays.asList(ip3));
+		p3.getItens().addAll(Arrays.asList(ip2));
+		
+	    itemPedidoRepository.saveAll(Arrays.asList(ip1, ip2, ip3));
+		
+		
 		
 	}
 
