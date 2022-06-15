@@ -49,6 +49,7 @@ public class Cliente implements Serializable {
 
 	// lembrar que em construtor n vai colecao
 	
+	//pq esse warning no id?
 	
 	public Cliente(Integer Id, String nome, String email, String cpfOuCnpj, TipoCliente tipo) {
 		super();
