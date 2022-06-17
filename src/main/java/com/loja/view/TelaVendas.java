@@ -35,8 +35,7 @@ public class TelaVendas extends JFrame {
 			java.util.logging.Logger.getLogger(TelaVendas.class.getName()).log(java.util.logging.Level.SEVERE, null,
 					ex);
 		}
-	
-		
+
 		java.awt.EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				new TelaVendas().setVisible(true);
@@ -81,9 +80,8 @@ public class TelaVendas extends JFrame {
 	protected javax.swing.JTextField jTNomeCliente;
 	protected javax.swing.JTable jTProdutoComprados;
 
-
 	@SuppressWarnings("unchecked")
-	
+
 	private void initComponents() {
 
 		jPanel1 = new javax.swing.JPanel();
@@ -126,7 +124,7 @@ public class TelaVendas extends JFrame {
 		setUndecorated(true);
 		setResizable(false);
 		addWindowListener(new java.awt.event.WindowAdapter() {
-			
+
 		});
 
 		jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -255,15 +253,15 @@ public class TelaVendas extends JFrame {
 						.addComponent(jTDinheiroEntrada, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
 						.addContainerGap()));
 
-		jLabel5.setFont(new java.awt.Font("Bebas Neue", 0, 24)); // NOI18N
-		jLabel5.setText("dinheiro entrada");
+		jLabel5.setFont(new java.awt.Font("produto", 20, 24));
+		jLabel5.setText("descrição do produto");
 
-		jLabel8.setFont(new java.awt.Font("Bebas Neue", 0, 24)); // NOI18N
+		jLabel8.setFont(new java.awt.Font("", 0, 24));
 		jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		jLabel8.setText("Nome Cliente:");
 		jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-		jLabel9.setFont(new java.awt.Font("Bebas Neue", 0, 24)); // NOI18N
+		jLabel9.setFont(new java.awt.Font("Bebas Neue", 0, 24));
 		jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		jLabel9.setText("Cpf Cliente:");
 		jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -274,7 +272,7 @@ public class TelaVendas extends JFrame {
 		jPanel9.setBackground(new java.awt.Color(0, 100, 240));
 		jPanel9.setPreferredSize(new java.awt.Dimension(302, 42));
 
-		jTNomeCliente.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
+		jTNomeCliente.setFont(new java.awt.Font("Bebas Neue", 0, 18));
 
 		javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
 		jPanel9.setLayout(jPanel9Layout);
@@ -313,7 +311,7 @@ public class TelaVendas extends JFrame {
 		jLFinalizarCompra.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
 		jLFinalizarCompra.setForeground(new java.awt.Color(255, 255, 255));
 		jLFinalizarCompra.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		jLFinalizarCompra.setText("Finalizar comprar");
+		jLFinalizarCompra.setText("Cadastrar Produto");
 
 		javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
 		jPanel11.setLayout(jPanel11Layout);
@@ -367,7 +365,7 @@ public class TelaVendas extends JFrame {
 						.addContainerGap()));
 
 		jLabel6.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
-		jLabel6.setText("Mercadinho Do Gelado");
+		jLabel6.setText("Loja Informatica");
 
 		jLData.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
 		jLData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -377,7 +375,7 @@ public class TelaVendas extends JFrame {
 
 		jLabel7.setFont(new java.awt.Font("Bebas Neue", 0, 24)); // NOI18N
 		jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		jLabel7.setText("c�digo");
+		jLabel7.setText("ID");
 
 		jPanel8.setBackground(new java.awt.Color(0, 100, 240));
 
@@ -570,7 +568,7 @@ public class TelaVendas extends JFrame {
 	private void jLQuantidadeAncestorAdded(javax.swing.event.AncestorEvent evt) {
 
 		int quantidade = 5;
-		jLQuantidade.setText("X " + quantidade);
+		jLQuantidade.setText("" + quantidade);
 
 	}
 
